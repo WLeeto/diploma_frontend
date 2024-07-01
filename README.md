@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# React Проект с Запуском через Docker Compose
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Добро пожаловать в наш React проект! Этот репозиторий содержит необходимые файлы и инструкции для настройки и запуска React приложения с использованием Docker и Docker Compose. Такой подход обеспечивает консистентность и легкую воспроизводимость вашей среды разработки.
 
-## Available Scripts
+## Содержание
 
-In the project directory, you can run:
+- [Особенности](#особенности)
+- [Предварительные требования](#предварительные-требования)
+- [Установка](#установка)
+- [Использование](#использование)
+- [Структура проекта](#структура-проекта)
+- [Конфигурация](#конфигурация)
+- [Вклад](#вклад)
+- [Лицензия](#лицензия)
 
-### `npm start`
+## Особенности
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Библиотека JavaScript для построения пользовательских интерфейсов.
+- **Docker**: Платформа для разработки, доставки и запуска приложений в контейнерах.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Предварительные требования
 
-### `npm test`
+Перед началом убедитесь, что на вашем компьютере установлены следующие инструменты:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
-### `npm run build`
+## Установка
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Клонируйте репозиторий:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    git clone https://github.com/yourusername/your-repo.git
+    cd your-repo
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Запустите контейнеры с помощью Docker Compose:
 
-### `npm run eject`
+    ```bash
+    docker-compose up --build
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Использование
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+После запуска контейнеров, ваше приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Остановить контейнеры можно с помощью:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    docker-compose down
+    ```
 
-## Learn More
+- Для выполнения команд внутри контейнера используйте:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    docker-compose exec web npm install
+    docker-compose exec web npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Фронт работает в бэком в репе [https://github.com/WLeeto/diploma_backend](https://github.com/WLeeto/diploma_backend)
