@@ -1,4 +1,4 @@
-export const baseURL = 'http://31.129.110.68/'
+export const baseURL = 'http://31.129.110.68:8001/'
 
 export const endpoints = {
     GETTOKEN: `${baseURL}api/token/`,
